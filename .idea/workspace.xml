@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="4598a3e9-019c-47f8-8769-3bcd9b891475" name="Default Changelist" comment="">
+    <list default="true" id="4598a3e9-019c-47f8-8769-3bcd9b891475" name="Default Changelist" comment="Create CDK stack + Dynamo role">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infra/lib/DataStack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/infra/lib/DataStack.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +45,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="24URZfT844o5fLcMrZvlrWYbXmv" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -45,20 +57,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="external.system.task.project.file.to.start" value="$PROJECT_DIR$/server" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/infra" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="ts.external.directory.path" value="C:\Users\gophr\IdeaProjects\skeleton\ubiquitous-parakeet\infra\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\gophr\IdeaProjects\skeleton\ubiquitous-parakeet\server" />
     </key>
   </component>
-  <component name="RunManager" selected="Shell Script.Deploy CDK">
-    <configuration name="C:/Users/gophr/IdeaProjects/skeleton/ubiquitous-parakeet/server [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+  <component name="RunManager" selected="Gradle.Start Server">
+    <configuration name="Start Server" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/server" />
@@ -74,7 +88,9 @@
         </option>
         <option name="vmOptions" value="" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
@@ -91,10 +107,13 @@
         </option>
         <option name="vmOptions" value="" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <configuration name="Deploy CDK" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="" />
       <option name="INDEPENDENT_SCRIPT_PATH" value="false" />
       <option name="SCRIPT_PATH" value="$PROJECT_DIR$/../../cdk-deployment-script.bat" />
       <option name="SCRIPT_OPTIONS" value="" />
@@ -103,13 +122,17 @@
       <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
       <option name="INTERPRETER_PATH" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.C:/Users/gophr/IdeaProjects/skeleton/ubiquitous-parakeet/server [bootRun]" />
+      <item itemvalue="Gradle.Start Server" />
       <item itemvalue="Shell Script.Deploy CDK" />
     </list>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -120,6 +143,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1643683235842</updated>
+      <workItem from="1643745967602" duration="272000" />
+      <workItem from="1643746269569" duration="88000" />
     </task>
     <task id="LOCAL-00001" summary="Create skeleton RESTApi">
       <created>1643684767128</created>
@@ -128,70 +153,190 @@
       <option name="project" value="LOCAL" />
       <updated>1643684767128</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Create CDK stack + Dynamo role">
+      <created>1643732976123</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1643732976123</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk/node_modules/aws-sdk/scripts/services-table-generator.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-s3/test/integ.bucket.url.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-s3/test/integ.bucket.url.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-s3/test/integ.bucket.url.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-s3/test/integ.bucket-sharing.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-s3/test/integ.bucket-sharing.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-s3/test/integ.bucket-sharing.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-ec2/test/integ.import-default-vpc.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-ec2/test/integ.import-default-vpc.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-ec2/test/integ.import-default-vpc.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-ec2/test/integ.vpc-endpoint.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-ec2/test/integ.vpc-endpoint.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-ec2/test/integ.vpc-endpoint.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-ec2/test/integ.nat-instances.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-ec2/test/integ.nat-instances.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-ec2/test/integ.nat-instances.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-ec2/test/example.images.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-ec2/test/example.images.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-ec2/test/example.images.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-ec2/test/integ.share-vpcs.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-ec2/test/integ.share-vpcs.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-ec2/test/integ.share-vpcs.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-eks/test/example.ssh-into-nodes.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-eks/test/example.ssh-into-nodes.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-eks/test/example.ssh-into-nodes.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-iam/test/example.role.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-iam/test/example.role.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-iam/test/example.role.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-iam/test/example.external-id.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-iam/test/example.external-id.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-iam/test/example.external-id.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-iam/test/example.attaching.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-iam/test/example.attaching.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-iam/test/example.attaching.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-iam/test/example.managedpolicy.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-iam/test/example.managedpolicy.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-iam/test/example.managedpolicy.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-kms/test/integ.key-sharing.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-kms/test/integ.key-sharing.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-kms/test/integ.key-sharing.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-rds/test/integ.instance.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-rds/test/integ.instance.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-rds/test/integ.instance.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-rds/test/integ.cluster-rotation.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-rds/test/integ.cluster-rotation.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-rds/test/integ.cluster-rotation.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-ssm/test/integ.parameter-store-string.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-ssm/test/integ.parameter-store-string.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-ssm/test/integ.parameter-store-string.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-ssm/test/integ.parameter.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-ssm/test/integ.parameter.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-ssm/test/integ.parameter.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-logs/test/example.retention.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-logs/test/example.retention.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-logs/test/example.retention.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-logs/test/integ.metricfilter.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-logs/test/integ.metricfilter.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-logs/test/integ.metricfilter.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-docdb/test/integ.cluster-rotation.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-docdb/test/integ.cluster-rotation.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-docdb/test/integ.cluster-rotation.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-config/test/integ.rule.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-config/test/integ.rule.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-config/test/integ.rule.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-lambda/test/integ.layer-version.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-lambda/test/integ.layer-version.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-lambda/test/integ.layer-version.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-lambda/test/integ.autoscaling.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-lambda/test/integ.autoscaling.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-lambda/test/integ.autoscaling.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-lambda/test/integ.assets.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-lambda/test/integ.assets.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-lambda/test/integ.assets.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-dynamodb/test/integ.autoscaling.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-dynamodb/test/integ.autoscaling.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-dynamodb/test/integ.autoscaling.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-codebuild/test/integ.docker-registry.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-codebuild/test/integ.docker-registry.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-codebuild/test/integ.docker-registry.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-codebuild/test/integ.ecr.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-codebuild/test/integ.ecr.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-codebuild/test/integ.ecr.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-codebuild/test/integ.defaults.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-codebuild/test/integ.defaults.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-codebuild/test/integ.defaults.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-codebuild/test/integ.docker-asset.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-codebuild/test/integ.docker-asset.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-codebuild/test/integ.docker-asset.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-s3-assets/test/integ.assets.refs.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-s3-assets/test/integ.assets.refs.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-s3-assets/test/integ.assets.refs.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-s3-assets/test/integ.assets.directory.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-s3-assets/test/integ.assets.directory.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-s3-assets/test/integ.assets.directory.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-s3-assets/test/integ.assets.file.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-s3-assets/test/integ.assets.file.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-s3-assets/test/integ.assets.file.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-s3-assets/test/integ.assets.permissions.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-s3-assets/test/integ.assets.permissions.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-s3-assets/test/integ.assets.permissions.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-s3-assets/test/integ.assets.bundling.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-s3-assets/test/integ.assets.bundling.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-s3-assets/test/integ.assets.bundling.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-apigateway/test/integ.restapi-import.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-apigateway/test/integ.restapi-import.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-apigateway/test/integ.restapi-import.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-cloudfront/test/example.default-cert-alias.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-cloudfront/test/example.default-cert-alias.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-cloudfront/test/example.default-cert-alias.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-cloudfront/test/example.acm-cert-alias.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-cloudfront/test/example.acm-cert-alias.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-cloudfront/test/example.acm-cert-alias.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-cloudfront/test/example.iam-cert-alias.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-cloudfront/test/example.iam-cert-alias.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-cloudfront/test/example.iam-cert-alias.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-cloudtrail/test/integ.cloudtrail.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-cloudtrail/test/integ.cloudtrail.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-cloudtrail/test/integ.cloudtrail.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-cloudtrail/test/integ.cloudtrail-supplied-bucket.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-cloudtrail/test/integ.cloudtrail-supplied-bucket.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-cloudtrail/test/integ.cloudtrail-supplied-bucket.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-autoscaling/test/example.images.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-autoscaling/test/example.images.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-autoscaling/test/example.images.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-secretsmanager/test/integ.secret.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-secretsmanager/test/integ.secret.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-secretsmanager/test/integ.secret.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-secretsmanager/test/example.app-with-secret.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-secretsmanager/test/example.app-with-secret.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-secretsmanager/test/example.app-with-secret.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-servicediscovery/test/integ.service-with-private-dns-namespace.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-servicediscovery/test/integ.service-with-private-dns-namespace.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-servicediscovery/test/integ.service-with-private-dns-namespace.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-servicediscovery/test/integ.service-with-cname-record.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-servicediscovery/test/integ.service-with-cname-record.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-servicediscovery/test/integ.service-with-cname-record.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-servicediscovery/test/integ.service-with-http-namespace.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-servicediscovery/test/integ.service-with-http-namespace.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-servicediscovery/test/integ.service-with-http-namespace.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-servicediscovery/test/integ.service-with-public-dns-namespace.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-servicediscovery/test/integ.service-with-public-dns-namespace.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-servicediscovery/test/integ.service-with-public-dns-namespace.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-sns-subscriptions/test/integ.sns-sqs.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-sns-subscriptions/test/integ.sns-sqs.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-sns-subscriptions/test/integ.sns-sqs.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-sns-subscriptions/test/integ.sns-sqs-cross-region.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-sns-subscriptions/test/integ.sns-sqs-cross-region.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-sns-subscriptions/test/integ.sns-sqs-cross-region.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-certificatemanager/test/example.dns-validated-request.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-certificatemanager/test/example.dns-validated-request.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-certificatemanager/test/example.dns-validated-request.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-codepipeline-actions/test/integ.cfn-template-from-repo.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-codepipeline-actions/test/integ.cfn-template-from-repo.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-codepipeline-actions/test/integ.cfn-template-from-repo.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-codepipeline-actions/test/integ.lambda-deployed-through-codepipeline.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-codepipeline-actions/test/integ.lambda-deployed-through-codepipeline.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-codepipeline-actions/test/integ.lambda-deployed-through-codepipeline.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-codepipeline-actions/test/integ.pipeline-ecs-separate-source.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-codepipeline-actions/test/integ.pipeline-ecs-separate-source.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-codepipeline-actions/test/integ.pipeline-ecs-separate-source.lit.d.ts" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-elasticloadbalancingv2-actions/test/integ.cognito.lit.js" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-elasticloadbalancingv2-actions/test/integ.cognito.lit.js.map" />
+        <option value="$PROJECT_DIR$/infra/node_modules/aws-cdk-lib/aws-elasticloadbalancingv2-actions/test/integ.cognito.lit.d.ts" />
+      </list>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create skeleton RESTApi" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create skeleton RESTApi" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="489" y="274" key="#Project_Structure" timestamp="1643684175007">
-      <screen x="0" y="0" width="3440" height="1400" />
-    </state>
-    <state x="489" y="274" key="#Project_Structure/0.0.3440.1400@0.0.3440.1400" timestamp="1643684175007" />
-    <state x="1303" y="268" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1643731968328">
-      <screen x="0" y="0" width="3440" height="1400" />
-    </state>
-    <state x="1303" y="268" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1643731968328" />
-    <state x="616" y="537" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1643732215975">
-      <screen x="0" y="0" width="3440" height="1400" />
-    </state>
-    <state x="616" y="537" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1643732215975" />
-    <state x="541" y="268" key="CommitChangelistDialog2" timestamp="1643684766679">
-      <screen x="0" y="0" width="3440" height="1400" />
-    </state>
-    <state x="541" y="268" key="CommitChangelistDialog2/0.0.3440.1400@0.0.3440.1400" timestamp="1643684766679" />
-    <state x="638" y="479" key="FileChooserDialogImpl" timestamp="1643732211513">
-      <screen x="0" y="0" width="3440" height="1400" />
-    </state>
-    <state x="638" y="479" key="FileChooserDialogImpl/0.0.3440.1400@0.0.3440.1400" timestamp="1643732211513" />
-    <state width="1903" height="383" key="GridCell.Tab.0.bottom" timestamp="1643731291157">
-      <screen x="0" y="0" width="3440" height="1400" />
-    </state>
-    <state width="1903" height="383" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1643731291157" />
-    <state width="1903" height="383" key="GridCell.Tab.0.center" timestamp="1643731291157">
-      <screen x="0" y="0" width="3440" height="1400" />
-    </state>
-    <state width="1903" height="383" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1643731291157" />
-    <state width="1903" height="383" key="GridCell.Tab.0.left" timestamp="1643731291156">
-      <screen x="0" y="0" width="3440" height="1400" />
-    </state>
-    <state width="1903" height="383" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1643731291156" />
-    <state width="1903" height="383" key="GridCell.Tab.0.right" timestamp="1643731291157">
-      <screen x="0" y="0" width="3440" height="1400" />
-    </state>
-    <state width="1903" height="383" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1643731291157" />
-    <state width="1903" height="488" key="GridCell.Tab.1.bottom" timestamp="1643685827012">
-      <screen x="0" y="0" width="3440" height="1400" />
-    </state>
-    <state width="1903" height="488" key="GridCell.Tab.1.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1643685827012" />
-    <state width="1903" height="488" key="GridCell.Tab.1.center" timestamp="1643685827011">
-      <screen x="0" y="0" width="3440" height="1400" />
-    </state>
-    <state width="1903" height="488" key="GridCell.Tab.1.center/0.0.3440.1400@0.0.3440.1400" timestamp="1643685827011" />
-    <state width="1903" height="488" key="GridCell.Tab.1.left" timestamp="1643685827011">
-      <screen x="0" y="0" width="3440" height="1400" />
-    </state>
-    <state width="1903" height="488" key="GridCell.Tab.1.left/0.0.3440.1400@0.0.3440.1400" timestamp="1643685827011" />
-    <state width="1903" height="488" key="GridCell.Tab.1.right" timestamp="1643685827011">
-      <screen x="0" y="0" width="3440" height="1400" />
-    </state>
-    <state width="1903" height="488" key="GridCell.Tab.1.right/0.0.3440.1400@0.0.3440.1400" timestamp="1643685827011" />
-    <state x="482" y="345" key="SettingsEditor" timestamp="1643731805759">
-      <screen x="0" y="0" width="3440" height="1400" />
-    </state>
-    <state x="482" y="345" key="SettingsEditor/0.0.3440.1400@0.0.3440.1400" timestamp="1643731805759" />
+    <MESSAGE value="Create CDK stack + Dynamo role" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create CDK stack + Dynamo role" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
