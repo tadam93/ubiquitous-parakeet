@@ -4,14 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4598a3e9-019c-47f8-8769-3bcd9b891475" name="Default Changelist" comment="Create CDK stack + Dynamo role">
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" />
+    <list default="true" id="4598a3e9-019c-47f8-8769-3bcd9b891475" name="Default Changelist" comment="Create Dynamo table and GSI">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/client.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infra/infra.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/datamodel/TestPojo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/module/AWSModule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/repository/TestPojoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ubiquitous-parakeet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ubiquitous-parakeet.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infra/lib/DataStack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/infra/lib/DataStack.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/server/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/server/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/apimodel/TestPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/apimodel/TestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/MainController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,13 +32,32 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+    <projectState path="$PROJECT_DIR$/server">
+      <ProjectState />
+    </projectState>
   </component>
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/server">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="server" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="server" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -45,6 +74,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JsBowerSettings">
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -54,16 +87,19 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="external.system.task.project.file.to.start" value="$PROJECT_DIR$/server" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
     <property name="ts.external.directory.path" value="C:\Users\gophr\IdeaProjects\skeleton\ubiquitous-parakeet\infra\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -72,6 +108,27 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.Start Server">
+    <configuration name="Run Tests" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/server" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="Start Server" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -127,9 +184,26 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="PortalApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="server.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.adamtrev.portal.PortalApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PortalApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="portal.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.adamtrev.portal.PortalApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Gradle.Run Tests" />
       <item itemvalue="Gradle.Start Server" />
       <item itemvalue="Shell Script.Deploy CDK" />
+      <item itemvalue="Spring Boot.PortalApplication" />
+      <item itemvalue="Spring Boot.PortalApplication (1)" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -144,7 +218,10 @@
       <option name="presentableId" value="Default" />
       <updated>1643683235842</updated>
       <workItem from="1643745967602" duration="272000" />
-      <workItem from="1643746269569" duration="88000" />
+      <workItem from="1643746269569" duration="874000" />
+      <workItem from="1643747163047" duration="262000" />
+      <workItem from="1643828487921" duration="127000" />
+      <workItem from="1643828626274" duration="2804000" />
     </task>
     <task id="LOCAL-00001" summary="Create skeleton RESTApi">
       <created>1643684767128</created>
@@ -160,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643732976123</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Create Dynamo table and GSI">
+      <created>1643746416634</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1643746416634</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,20 +417,46 @@
       </list>
     </option>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create skeleton RESTApi" />
     <MESSAGE value="Create CDK stack + Dynamo role" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create CDK stack + Dynamo role" />
+    <MESSAGE value="Create Dynamo table and GSI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Dynamo table and GSI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/MainController.java</url>
-          <line>11</line>
+          <line>23</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/repository/TestPojoRepository.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/repository/TestPojoRepository.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

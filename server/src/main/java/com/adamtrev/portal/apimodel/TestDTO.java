@@ -5,7 +5,8 @@ import lombok.Data;
 
 @Builder
 @Data
-public class TestPojo {
-    private String name;
+public class TestDTO {
+    private String firstName;
+    private String lastName;
     private int age;
 }
