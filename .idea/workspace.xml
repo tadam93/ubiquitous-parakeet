@@ -4,24 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4598a3e9-019c-47f8-8769-3bcd9b891475" name="Default Changelist" comment="Create Dynamo table and GSI">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/client.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infra/infra.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/datamodel/TestPojo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/module/AWSModule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/repository/TestPojoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ubiquitous-parakeet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ubiquitous-parakeet.iml" afterDir="false" />
+    <list default="true" id="4598a3e9-019c-47f8-8769-3bcd9b891475" name="Default Changelist" comment="Wire DynamoDB connection into server + create test repository">
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/GlobalErrorAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/data/StaleDataException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/server/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/server/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/apimodel/TestPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/apimodel/TestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/apimodel/TestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/apimodel/UserDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/datamodel/TestPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/data/UserPojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/repository/TestPojoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/repository/UserPojoRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,11 +61,20 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="JsBowerSettings">
     <bower-package value="" />
@@ -221,7 +223,7 @@
       <workItem from="1643746269569" duration="874000" />
       <workItem from="1643747163047" duration="262000" />
       <workItem from="1643828487921" duration="127000" />
-      <workItem from="1643828626274" duration="2804000" />
+      <workItem from="1643828626274" duration="4959000" />
     </task>
     <task id="LOCAL-00001" summary="Create skeleton RESTApi">
       <created>1643684767128</created>
@@ -244,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643746416634</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Wire DynamoDB connection into server + create test repository">
+      <created>1643831581416</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1643831581416</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,25 +441,26 @@
     <MESSAGE value="Create skeleton RESTApi" />
     <MESSAGE value="Create CDK stack + Dynamo role" />
     <MESSAGE value="Create Dynamo table and GSI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Dynamo table and GSI" />
+    <MESSAGE value="Wire DynamoDB connection into server + create test repository" />
+    <option name="LAST_COMMIT_MESSAGE" value="Wire DynamoDB connection into server + create test repository" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/MainController.java</url>
-          <line>23</line>
+          <line>31</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/repository/TestPojoRepository.java</url>
-          <line>20</line>
+          <url>file://$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/repository/UserPojoRepository.java</url>
+          <line>24</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/repository/TestPojoRepository.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="4" />
+          <url>file://$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/MainController.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

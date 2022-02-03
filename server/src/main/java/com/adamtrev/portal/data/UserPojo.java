@@ -1,17 +1,19 @@
-package com.adamtrev.portal.datamodel;
+package com.adamtrev.portal.data;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.joda.time.DateTime;
 
 @Builder
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 // should make this a constant based on deployment env variable
 @DynamoDBTable(tableName = "DataStack-TestbedTable530D840A-83YRDM7PE8HC")
-public class TestPojo {
+public class UserPojo {
     @DynamoDBHashKey(attributeName = "pk")
     private String firstName;
 

@@ -1,28 +1,61 @@
 package com.adamtrev.portal.controller;
 
-import com.adamtrev.portal.apimodel.TestDTO;
-import com.adamtrev.portal.datamodel.TestPojo;
-import com.adamtrev.portal.repository.TestPojoRepository;
+import com.adamtrev.portal.apimodel.UserDto;
+import com.adamtrev.portal.data.UserPojo;
+import com.adamtrev.portal.mapper.UserMapper;
+import com.adamtrev.portal.repository.UserPojoRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @AllArgsConstructor(onConstructor_ = @Autowired)
 public class MainController {
-    private TestPojoRepository testPojoRepository;
+    private static final String PREFIX_V1 = "/api/v1/";
+    private static final String USER_API = PREFIX_V1 + "users";
 
-    @GetMapping("/test")
-    public TestDTO testsApi(@RequestParam(value = "firstName", defaultValue = "Trevor") final String firstName,
-                            @RequestParam(value = "lastName", defaultValue = "Malone") final String lastName) {
-        testPojoRepository.create(TestPojo.builder()
-                        .firstName(firstName)
-                        .lastName(lastName)
+    private UserPojoRepository userPojoRepository;
+    private UserMapper userMapper;
+
+    @PostMapping(USER_API)
+    public ResponseEntity<UserDto> createUser(@RequestParam(value = "firstName", defaultValue = "Trevor") final String firstName,
+                                              @RequestParam(value = "lastName", defaultValue = "Malone") final String lastName,
+                                              @RequestParam(value = "age", defaultValue = "21") final Integer age) {
+        final UserPojo pojo = userPojoRepository.create(UserPojo
+                .builder()
+                .firstName(firstName)
+                .lastName(lastName)
+                .age(age)
                 .build());
-        return TestDTO.builder()
-                .age(28)
-                .build();
+
+        return ResponseEntity
+                .ok()
+                .body(userMapper.toDto(pojo));
+    }
+
+    @GetMapping(USER_API)
+    public ResponseEntity<UserDto> getUser(@RequestParam(value = "firstName") final String firstName,
+                                           @RequestParam(value = "lastName") final String lastName) {
+        final UserPojo pojo = userPojoRepository.get(firstName, lastName);
+
+        if (pojo == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity
+                .ok()
+                .body(userMapper.toDto(pojo));
+    }
+
+    @DeleteMapping(USER_API)
+    public ResponseEntity<UserPojo> deleteUser(@RequestParam(value = "firstName") final String firstName,
+                                               @RequestParam(value = "lastName") final String lastName) {
+        final UserPojo pojo = userPojoRepository.delete(firstName, lastName);
+
+        if (pojo == null) {
+            return ResponseEntity.notFound().build();
+        }
+
+        return ResponseEntity.ok().body(pojo);
     }
 }
