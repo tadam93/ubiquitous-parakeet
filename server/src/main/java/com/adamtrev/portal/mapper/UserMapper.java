@@ -1,12 +1,12 @@
 package com.adamtrev.portal.mapper;
 
-import com.adamtrev.portal.apimodel.UserDto;
-import com.adamtrev.portal.data.UserPojo;
+import com.adamtrev.portal.apimodel.BillDto;
+import com.adamtrev.portal.data.BillsPojo;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
 public interface UserMapper {
-    UserDto toDto(final UserPojo userPojo);
+    BillDto toDto(final BillsPojo billsPojo);
 
-    UserPojo toPojo(final UserDto dto);
+    BillsPojo toPojo(final BillDto dto);
 }

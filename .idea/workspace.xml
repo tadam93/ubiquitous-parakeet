@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4598a3e9-019c-47f8-8769-3bcd9b891475" name="Default Changelist" comment="Wire DynamoDB connection into server + create test repository">
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/GlobalErrorAdvice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/data/StaleDataException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="4598a3e9-019c-47f8-8769-3bcd9b891475" name="Default Changelist" comment="Implement create, delete and get user api">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/server/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/apimodel/TestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/apimodel/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/datamodel/TestPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/data/UserPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/repository/TestPojoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/repository/UserPojoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/client.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/apimodel/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/apimodel/BillDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/BillsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/data/UserPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/data/BillsPojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/repository/UserPojoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/repository/BillsRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +220,7 @@
       <workItem from="1643746269569" duration="874000" />
       <workItem from="1643747163047" duration="262000" />
       <workItem from="1643828487921" duration="127000" />
-      <workItem from="1643828626274" duration="4959000" />
+      <workItem from="1643828626274" duration="8847000" />
     </task>
     <task id="LOCAL-00001" summary="Create skeleton RESTApi">
       <created>1643684767128</created>
@@ -253,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643831581416</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Implement create, delete and get user api">
+      <created>1643856850431</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1643856850431</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,25 +446,31 @@
     <MESSAGE value="Create CDK stack + Dynamo role" />
     <MESSAGE value="Create Dynamo table and GSI" />
     <MESSAGE value="Wire DynamoDB connection into server + create test repository" />
-    <option name="LAST_COMMIT_MESSAGE" value="Wire DynamoDB connection into server + create test repository" />
+    <MESSAGE value="Implement create, delete and get user api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement create, delete and get user api" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/MainController.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/repository/UserPojoRepository.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/MainController.java</url>
+          <url>file://$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/BillsController.java</url>
           <line>44</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/BillsController.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/repository/BillsRepository.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/repository/BillsRepository.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
