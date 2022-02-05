@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4598a3e9-019c-47f8-8769-3bcd9b891475" name="Default Changelist" comment="Convert User API to bills api">
-      <change afterPath="$PROJECT_DIR$/client/client.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Bill.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/BillList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/BillView.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/network/BillsAccessor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/config/WebConfig.java" afterDir="false" />
+    <list default="true" id="4598a3e9-019c-47f8-8769-3bcd9b891475" name="Default Changelist" comment="Setup BillsViews, resolve cors issues and create get all bills API">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/server/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/BillsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/BillsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/module/AWSModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/config/AWSConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/repository/BillsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/repository/BillsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +240,7 @@
       <workItem from="1643828626274" duration="9147000" />
       <workItem from="1644021443814" duration="860000" />
       <workItem from="1644022683365" duration="621000" />
-      <workItem from="1644025284623" duration="5414000" />
+      <workItem from="1644025284623" duration="6036000" />
     </task>
     <task id="LOCAL-00001" summary="Create skeleton RESTApi">
       <created>1643684767128</created>
@@ -292,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643860982032</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Setup BillsViews, resolve cors issues and create get all bills API">
+      <created>1644033695781</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1644033695781</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,7 +482,8 @@
     <MESSAGE value="Wire DynamoDB connection into server + create test repository" />
     <MESSAGE value="Implement create, delete and get user api" />
     <MESSAGE value="Convert User API to bills api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Convert User API to bills api" />
+    <MESSAGE value="Setup BillsViews, resolve cors issues and create get all bills API" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setup BillsViews, resolve cors issues and create get all bills API" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
