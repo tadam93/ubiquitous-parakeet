@@ -32,8 +32,21 @@ public class BillsController {
                 .body(billsMapper.toDto(pojo));
     }
 
+    @GetMapping(BILLS_API)
+    public ResponseEntity<List<BillDto>> getBills() {
+        final List<BillsPojo> pojo = billsRepository.getBills();
+
+        if (pojo == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity
+                .ok()
+                .body(pojo.stream().map(billsMapper::toDto).collect(Collectors.toList()));
+    }
+
+
     @GetMapping(BILLS_API + "/{company}")
-    public ResponseEntity<List<BillDto>> getBills(@PathVariable(value = "company") final String companyName) {
+    public ResponseEntity<List<BillDto>> getBillsForCompany(@PathVariable(value = "company") final String companyName) {
         final List<BillsPojo> pojo = billsRepository.getBillsForCompany(companyName);
 
         if (pojo == null) {

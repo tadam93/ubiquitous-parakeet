@@ -5,6 +5,7 @@ import com.adamtrev.portal.data.StaleDataException;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBDeleteExpression;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBQueryExpression;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
 import com.amazonaws.services.dynamodbv2.model.AttributeValue;
 import com.amazonaws.services.dynamodbv2.model.ConditionalCheckFailedException;
 import lombok.AllArgsConstructor;
@@ -29,6 +30,11 @@ public class BillsRepository {
         }
 
         return pojo;
+    }
+
+    public List<BillsPojo> getBills() {
+        final DynamoDBScanExpression scanExpression = new DynamoDBScanExpression();
+        return mapper.scan(BillsPojo.class, scanExpression);
     }
 
     public List<BillsPojo> getBillsForCompany(final String companyName) {

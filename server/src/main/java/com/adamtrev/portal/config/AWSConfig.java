@@ -1,4 +1,4 @@
-package com.adamtrev.portal.module;
+package com.adamtrev.portal.config;
 
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class AWSModule {
+public class AWSConfig {
     private static final String REGION = "us-west-2";
 
     @Bean

@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4598a3e9-019c-47f8-8769-3bcd9b891475" name="Default Changelist" comment="Implement create, delete and get user api">
+    <list default="true" id="4598a3e9-019c-47f8-8769-3bcd9b891475" name="Default Changelist" comment="Convert User API to bills api">
+      <change afterPath="$PROJECT_DIR$/client/client.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Bill.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/BillList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/BillView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/network/BillsAccessor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/client.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/apimodel/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/apimodel/BillDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/BillsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/data/UserPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/data/BillsPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/repository/UserPojoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/repository/BillsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/server/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/BillsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/BillsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/module/AWSModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/config/AWSConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/repository/BillsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/repository/BillsRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,8 +61,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -93,12 +97,14 @@
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="external.system.task.project.file.to.start" value="$PROJECT_DIR$/server" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/package.json" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="show.run.dashboard.notification" value="false" />
     <property name="ts.external.directory.path" value="C:\Users\gophr\IdeaProjects\skeleton\ubiquitous-parakeet\infra\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -133,7 +139,7 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/server" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" value="--scan" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -197,9 +203,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Build Webapp" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="Run Webapp" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Gradle.Run Tests" />
       <item itemvalue="Gradle.Start Server" />
+      <item itemvalue="npm.Run Webapp" />
+      <item itemvalue="npm.Build Webapp" />
       <item itemvalue="Shell Script.Deploy CDK" />
       <item itemvalue="Spring Boot.PortalApplication" />
       <item itemvalue="Spring Boot.PortalApplication (1)" />
@@ -220,7 +245,10 @@
       <workItem from="1643746269569" duration="874000" />
       <workItem from="1643747163047" duration="262000" />
       <workItem from="1643828487921" duration="127000" />
-      <workItem from="1643828626274" duration="8847000" />
+      <workItem from="1643828626274" duration="9147000" />
+      <workItem from="1644021443814" duration="860000" />
+      <workItem from="1644022683365" duration="621000" />
+      <workItem from="1644025284623" duration="5414000" />
     </task>
     <task id="LOCAL-00001" summary="Create skeleton RESTApi">
       <created>1643684767128</created>
@@ -257,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643856850431</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Convert User API to bills api">
+      <created>1643860982032</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1643860982032</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,29 +482,20 @@
     <MESSAGE value="Create Dynamo table and GSI" />
     <MESSAGE value="Wire DynamoDB connection into server + create test repository" />
     <MESSAGE value="Implement create, delete and get user api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement create, delete and get user api" />
+    <MESSAGE value="Convert User API to bills api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Convert User API to bills api" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/BillsController.java</url>
-          <line>44</line>
+          <line>57</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/BillsController.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/repository/BillsRepository.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/repository/BillsRepository.java</url>
-          <line>49</line>
+          <line>56</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>

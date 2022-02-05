@@ -25,6 +25,7 @@ dependencies {
 	implementation 'com.amazonaws:aws-java-sdk-dynamodb'
 
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 	implementation 'joda-time:joda-time:2.10.13'
