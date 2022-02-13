@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4598a3e9-019c-47f8-8769-3bcd9b891475" name="Default Changelist" comment="Setup BillsViews, resolve cors issues and create get all bills API">
+      <change afterPath="$PROJECT_DIR$/client/src/components/BillsManagementPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/CreateBillView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Bill.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Bill.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/BillList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/BillList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/BillView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/network/BillsAccessor.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/network/BillsAccessor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/BillsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/BillsController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,6 +247,7 @@
       <workItem from="1644021443814" duration="860000" />
       <workItem from="1644022683365" duration="621000" />
       <workItem from="1644025284623" duration="6036000" />
+      <workItem from="1644780943669" duration="5815000" />
     </task>
     <task id="LOCAL-00001" summary="Create skeleton RESTApi">
       <created>1643684767128</created>
@@ -490,13 +497,83 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/controller/BillsController.java</url>
-          <line>57</line>
+          <line>60</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/server/src/main/java/com/adamtrev/portal/repository/BillsRepository.java</url>
           <line>56</line>
           <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.3.15/dc77bfb04059f61b04184ec434fe3494c5079286/spring-web-5.3.15-sources.jar!/org/springframework/web/filter/CorsFilter.java</url>
+          <line>87</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.3.15/dc77bfb04059f61b04184ec434fe3494c5079286/spring-web-5.3.15-sources.jar!/org/springframework/web/cors/DefaultCorsProcessor.java</url>
+          <line>121</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.3.15/dc77bfb04059f61b04184ec434fe3494c5079286/spring-web-5.3.15-sources.jar!/org/springframework/web/cors/DefaultCorsProcessor.java</url>
+          <line>129</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.3.15/dc77bfb04059f61b04184ec434fe3494c5079286/spring-web-5.3.15-sources.jar!/org/springframework/web/cors/DefaultCorsProcessor.java</url>
+          <line>137</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.3.15/dc77bfb04059f61b04184ec434fe3494c5079286/spring-web-5.3.15-sources.jar!/org/springframework/web/cors/DefaultCorsProcessor.java</url>
+          <line>163</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.3.15/dc77bfb04059f61b04184ec434fe3494c5079286/spring-web-5.3.15-sources.jar!/org/springframework/web/cors/CorsConfiguration.java</url>
+          <line>570</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.3.15/dc77bfb04059f61b04184ec434fe3494c5079286/spring-web-5.3.15-sources.jar!/org/springframework/web/cors/CorsConfiguration.java</url>
+          <line>574</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.3.15/dc77bfb04059f61b04184ec434fe3494c5079286/spring-web-5.3.15-sources.jar!/org/springframework/web/cors/CorsConfiguration.java</url>
+          <line>585</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.3.15/dc77bfb04059f61b04184ec434fe3494c5079286/spring-web-5.3.15-sources.jar!/org/springframework/web/cors/CorsConfiguration.java</url>
+          <line>586</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.3.15/dc77bfb04059f61b04184ec434fe3494c5079286/spring-web-5.3.15-sources.jar!/org/springframework/web/cors/CorsConfiguration.java</url>
+          <line>587</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.3.15/dc77bfb04059f61b04184ec434fe3494c5079286/spring-web-5.3.15-sources.jar!/org/springframework/web/cors/CorsConfiguration.java</url>
+          <line>592</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.3.15/dc77bfb04059f61b04184ec434fe3494c5079286/spring-web-5.3.15-sources.jar!/org/springframework/web/cors/CorsConfiguration.java</url>
+          <line>588</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.3.15/dc77bfb04059f61b04184ec434fe3494c5079286/spring-web-5.3.15-sources.jar!/org/springframework/web/cors/DefaultCorsProcessor.java</url>
+          <line>198</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.3.15/dc77bfb04059f61b04184ec434fe3494c5079286/spring-web-5.3.15-sources.jar!/org/springframework/web/cors/DefaultCorsProcessor.java</url>
+          <line>134</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

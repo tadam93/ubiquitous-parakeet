@@ -1,31 +1,27 @@
 import {Component} from "react";
 import {Bill} from "./Bill";
-import {BillsAccessor} from "../network/BillsAccessor";
 
 export class BillList extends Component {
-    billsAccessor = new BillsAccessor();
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            bills: []
-        }
-    }
-
-    componentDidMount() {
-        let self = this;
-        this.billsAccessor.getBills(function (billsResponse) {
-            self.setState({bills: billsResponse})
-        });
-    }
-
     render() {
-        const bills = this.state.bills.map((bill) =>
-            <Bill companyName={bill.companyName} cost={bill.cost} payableDate={bill.payableDate} />);
+        const bills = this.props.bills.map((bill) =>
+            <Bill key={bill.companyName + bill.cost + bill.payableDate}
+                  companyName={bill.companyName}
+                  cost={bill.cost}
+                  payableDate={bill.payableDate}
+                  payBill={this.props.payBill}
+            />);
         return (
-            <table>
-                {bills}
-            </table>
+            <div>
+                <h3>Current Bills</h3>
+                <table>
+                    <thead>
+                        <tr><td>Company Name</td><td>Payable Date</td><td>Amount Due</td><td>Pay Off</td></tr>
+                    </thead>
+                    <tbody>
+                        {bills}
+                    </tbody>
+                </table>
+            </div>
         );
     }
 }

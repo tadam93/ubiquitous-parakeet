@@ -5,9 +5,12 @@ import com.adamtrev.portal.data.BillsPojo;
 import com.adamtrev.portal.mapper.UserMapper;
 import com.adamtrev.portal.repository.BillsRepository;
 import lombok.AllArgsConstructor;
+import org.apache.http.HttpRequest;
+import org.apache.http.client.methods.HttpHead;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,7 +27,7 @@ public class BillsController {
     private UserMapper billsMapper;
 
     @PostMapping(BILLS_API)
-    public ResponseEntity<BillDto> createUser(@RequestBody final BillDto bill) {
+    public ResponseEntity<BillDto> createBill(@RequestBody final BillDto bill) {
         final BillsPojo pojo = billsRepository.createBill(billsMapper.toPojo(bill));
 
         return ResponseEntity

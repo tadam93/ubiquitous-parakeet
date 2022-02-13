@@ -11,4 +11,22 @@ export class BillsAccessor {
                 }
             });
     }
+
+    createBill(bill, successCallback) {
+        return axios.post(this.BASE_API, bill)
+            .then((response) => {
+                if (response.status === 200) {
+                    successCallback(response.data)
+                }
+            });
+    }
+
+    payBill(companyName, payableDate, successCallback) {
+        return axios.delete(this.BASE_API + `/${companyName}/${payableDate}`)
+            .then((response) => {
+                if (response.status === 200) {
+                    successCallback(response.data)
+                }
+            });
+    }
 }
